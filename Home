@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Change these details -->
+  <title>nINA HONKALINNA | Business & Finance Portfolio</title>
+  <meta
+    name="description"
+    content="Business and finance portfolio featuring expertise, projects, experience and professional articles."
+  />
+
+  <!-- Elegant fonts. Remove these two lines if you prefer system fonts only. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #111011;
+      --soft-black: #1b181b;
+      --pink: #e7b7c6;
+      --light-pink: #f8e8ee;
+      --deep-pink: #ad657f;
+      --cream: #fffaf7;
+      --white: #ffffff;
+      --grey: #6f686d;
+      --line: rgba(17, 16, 17, 0.13);
+      --shadow: 0 18px 45px rgba(34, 20, 28, 0.10);
+      --radius: 22px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      color: var(--black);
+      background: var(--cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--deep-pink);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      line-height: 1.05;
+    }
+
+    h1 {
+      max-width: 780px;
+      font-size: clamp(3.5rem, 8vw, 7.5rem);
+      font-weight: 600;
+      letter-spacing: -0.045em;
+    }
+
+    h2 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .section-heading {
+      max-width: 750px;
+      margin-bottom: 48px;
+    }
+
+    .section-heading p {
+      max-width: 650px;
+      margin-top: 18px;
+      color: var(--grey);
+      font-size: 1.02rem;
+    }
+
+    /* Navigation */
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
+      border-bottom: 1px solid transparent;
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .site-header.scrolled {
+      background: rgba(255, 250, 247, 0.92);
+      border-color: var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .logo span {
+      color: var(--deep-pink);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      width: 0;
+      height: 1px;
+      background: var(--deep-pink);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-button {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      padding: 145px 0 80px;
+      background:
+        radial-gradient(circle at 82% 28%, rgba(231, 183, 198, 0.62), transparent 31%),
+        linear-gradient(135deg, var(--cream) 0%, #fff 52%, var(--light-pink) 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 135px;
+      right: -120px;
+      width: 390px;
+      height: 390px;
+      border: 1px solid rgba(173, 101, 127, 0.28);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .hero-copy p {
+      max-width: 650px;
+      margin: 28px 0 34px;
+      color: #4f484d;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 25px;
+      border: 1px solid var(--black);
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      max-width: 410px;
+      margin-left: auto;
+    }
+
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border: 1px solid rgba(17, 16, 17, 0.15);
+      border-radius: 190px 190px 28px 28px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    .photo-placeholder {
+      display: grid;
+      place-items: center;
+      padding: 35px;
+      color: #6b5360;
+      text-align: center;
+      background:
+        linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.18)),
+        linear-gradient(145deg, #e8bcc9, #f9edf1 55%, #d8a7b8);
+    }
+
+    .photo-note {
+      position: absolute;
+      left: -45px;
+      bottom: 35px;
+      max-width: 220px;
+      padding: 18px 20px;
+      border: 1px solid rgba(255,255,255,0.75);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      font-size: 0.86rem;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      align-items: start;
+      gap: 80px;
+    }
+
+    .about-card {
+      padding: 42px;
+      border-radius: var(--radius);
+      color: var(--white);
+      background: var(--black);
+      box-shadow: var(--shadow);
+    }
+
+    .about-card .number {
+      margin-bottom: 10px;
+      color: var(--pink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 4.2rem;
+      line-height: 1;
+    }
+
+    .about-card p {
+      color: rgba(255,255,255,0.72);
+    }
+
+    .about-copy p {
+      margin-bottom: 20px;
+      color: var(--grey);
+    }
+
+    .signature {
+      margin-top: 30px;
+      color: var(--deep-pink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 2rem;
+      font-style: italic;
+    }
+
+    /* Expertise */
+    .expertise {
+      color: var(--white);
+      background: var(--soft-black);
+    }
+
+    .expertise .section-heading p {
+      color: rgba(255,255,255,0.65);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .expertise-card {
+      min-height: 260px;
+      padding: 34px;
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018));
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(231, 183, 198, 0.55);
+    }
+
+    .expertise-number {
+      display: inline-block;
+      margin-bottom: 34px;
+      color: var(--pink);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+    }
+
+    .expertise-card p {
+      margin-top: 14px;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* Experience */
+    .timeline {
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 45px;
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline-year {
+      color: var(--deep-pink);
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .timeline-content p {
+      max-width: 720px;
+      margin-top: 12px;
+      color: var(--grey);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.78rem;
+    }
+
+    /* Articles */
+    .articles {
+      background: var(--light-pink);
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .article-card {
+      overflow: hidden;
+      border: 1px solid rgba(17,16,17,0.10);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 10px 30px rgba(34, 20, 28, 0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .article-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .article-placeholder {
+      display: grid;
+      place-items: center;
+      color: #72505e;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.25), transparent),
+        #dfafbe;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.25rem;
+    }
+
+    .article-content {
+      padding: 26px;
+    }
+
+    .article-meta {
+      margin-bottom: 12px;
+      color: var(--deep-pink);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .article-content p {
+      margin: 14px 0 22px;
+      color: var(--grey);
+      font-size: 0.92rem;
+    }
+
+    .text-link {
+      font-size: 0.87rem;
+      font-weight: 600;
+    }
+
+    .text-link::after {
+      content: " →";
+      color: var(--deep-pink);
+    }
+
+    /* Contact */
+    .contact-panel {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 70px;
+      padding: 65px;
+      border-radius: 30px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 90% 15%, rgba(231,183,198,0.24), transparent 28%),
+        var(--black);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-panel p {
+      max-width: 600px;
+      margin-top: 20px;
+      color: rgba(255,255,255,0.67);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .contact-link {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.17);
+    }
+
+    .contact-link span:last-child {
+      color: var(--pink);
+    }
+
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--line);
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      color: var(--grey);
+    }
+
+    /* Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        order: 1;
+      }
+
+      .hero-photo-wrap {
+        order: 2;
+        width: min(78%, 400px);
+        margin: 30px auto 0;
+      }
+
+      .expertise-grid,
+      .article-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-panel {
+        padding: 48px 34px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .section {
+        padding: 78px 0;
+      }
+
+      .menu-button {
+        display: inline-grid;
+        place-items: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 4%;
+        right: 4%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255, 250, 247, 0.98);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 13px 8px;
+      }
+
+      .expertise-grid,
+      .article-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .photo-note {
+        left: -18px;
+        bottom: 20px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container" aria-label="Main navigation">
+      <!-- Replace YOUR NAME -->
+      <a class="logo" href="#home">YOUR <span>NAME</span></a>
+
+      <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Business • Finance • Transformation</span>
+
+          <h1>Clarity behind the numbers. Strategy beyond them.</h1>
+
+          <p>
+            I am a business and finance professional focused on turning complex
+            information into practical decisions, stronger performance and
+            sustainable growth.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#expertise">Explore my expertise</a>
+            <a class="button button-secondary" href="#articles">Read my articles</a>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap reveal">
+          <!--
+            TO ADD YOUR PHOTO:
+            1. Put your image in the same GitHub folder.
+            2. Delete the placeholder div below.
+            3. Add:
+            <img class="hero-photo" src="your-photo.jpg" alt="Portrait of Your Name">
+          -->
+          <div class="hero-photo photo-placeholder">
+            Add your professional portrait here
+          </div>
+
+          <div class="photo-note">
+            Finance expertise with a commercial, analytical and technology-driven perspective.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-card reveal">
+          <!-- Change this number and text -->
+          <div class="number">01</div>
+          <h3>Finance with a wider business perspective</h3>
+          <p>
+            My work connects financial insight, operations, technology and
+            strategic decision-making.
+          </p>
+        </div>
+
+        <div class="about-copy reveal">
+          <span class="eyebrow">About me</span>
+          <h2>I make business information easier to understand—and act on.</h2>
+
+          <p>
+            My background combines business controlling, financial planning,
+            reporting, performance analysis and digital development. I enjoy
+            finding the story behind the numbers and translating it into clear
+            recommendations for management.
+          </p>
+
+          <p>
+            I am especially interested in how finance teams can use better
+            processes, data and technology to improve decision-making, create
+            transparency and support profitable growth.
+          </p>
+
+          <!-- Replace with your name -->
+          <div class="signature">Your Name</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise -->
+    <section class="section expertise" id="expertise">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Core competencies</span>
+          <h2>Where finance meets strategy, operations and technology.</h2>
+          <p>
+            Edit these cards to reflect your strongest competencies, tools and
+            achievements.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-card reveal">
+            <span class="expertise-number">01 / FINANCE</span>
+            <h3>Financial Planning & Analysis</h3>
+            <p>
+              Budgeting, forecasting, variance analysis, management reporting,
+              profitability and performance monitoring.
+            </p>
+          </article>
+
+          <article class="expertise-card reveal">
+            <span class="expertise-number">02 / BUSINESS</span>
+            <h3>Business Partnering</h3>
+            <p>
+              Translating financial results into practical insights, commercial
+              recommendations and decision support for leadership.
+            </p>
+          </article>
+
+          <article class="expertise-card reveal">
+            <span class="expertise-number">03 / DATA</span>
+            <h3>Reporting & Analytics</h3>
+            <p>
+              KPI development, dashboards, data visualization and clear
+              executive-level reporting using modern finance tools.
+            </p>
+          </article>
+
+          <article class="expertise-card reveal">
+            <span class="expertise-number">04 / CHANGE</span>
+            <h3>Digital Transformation</h3>
+            <p>
+              Process improvement, system implementation, automation and the
+              practical use of technology in finance and business operations.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Selected experience</span>
+          <h2>A portfolio built around measurable business value.</h2>
+          <p>
+            Replace the examples below with your own roles, projects and
+            accomplishments. Focus on outcomes whenever possible.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-year">Current role</div>
+            <div class="timeline-content">
+              <h3>Business Controller / Finance Professional</h3>
+              <p>
+                Describe your current responsibilities, business scope and the
+                decisions you support. Add one or two measurable achievements.
+              </p>
+              <div class="tags">
+                <span class="tag">Forecasting</span>
+                <span class="tag">Management Reporting</span>
+                <span class="tag">Business Partnering</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-year">Key project</div>
+            <div class="timeline-content">
+              <h3>Finance System or Reporting Transformation</h3>
+              <p>
+                Explain the challenge, your role, the solution and the business
+                impact—for example faster reporting, lower costs or improved
+                data quality.
+              </p>
+              <div class="tags">
+                <span class="tag">Process Improvement</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">ERP</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-year">Education</div>
+            <div class="timeline-content">
+              <h3>Degree, Certification or Research</h3>
+              <p>
+                Add your degree, thesis topic, relevant certifications or
+                professional development related to finance, business or
+                technology.
+              </p>
+              <div class="tags">
+                <span class="tag">Business</span>
+                <span class="tag">Finance</span>
+                <span class="tag">Digital Transformation</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="section articles" id="articles">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Insights & articles</span>
+          <h2>Thoughts on modern finance and better business.</h2>
+          <p>
+            Each article can later link to a separate HTML page, LinkedIn
+            article, Medium post or PDF.
+          </p>
+        </div>
+
+        <div class="article-grid">
+          <article class="article-card reveal">
+            <!-- Replace with: <img class="article-image" src="article-1.jpg" alt=""> -->
+            <div class="article-image article-placeholder">Article image</div>
+            <div class="article-content">
+              <div class="article-meta">Finance Strategy • 6 min read</div>
+              <h3>Why Finance Should Be More Than Reporting</h3>
+              <p>
+                A practical look at how finance professionals can move from
+                explaining the past to shaping future decisions.
+              </p>
+              <!-- Replace # with the article URL -->
+              <a class="text-link" href="#">Read article</a>
+            </div>
+          </article>
+
+          <article class="article-card reveal">
+            <div class="article-image article-placeholder">Article image</div>
+            <div class="article-content">
+              <div class="article-meta">Digital Finance • 5 min read</div>
+              <h3>Building Better Finance Processes</h3>
+              <p>
+                How automation, clearer ownership and smarter systems can give
+                finance teams more time for valuable analysis.
+              </p>
+              <a class="text-link" href="#">Read article</a>
+            </div>
+          </article>
+
+          <article class="article-card reveal">
+            <div class="article-image article-placeholder">Article image</div>
+            <div class="article-content">
+              <div class="article-meta">Leadership • 7 min read</div>
+              <h3>Turning KPIs Into Better Decisions</h3>
+              <p>
+                The difference between reporting more metrics and presenting
+                the few insights that leaders genuinely need.
+              </p>
+              <a class="text-link" href="#">Read article</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div>
+            <span class="eyebrow">Contact</span>
+            <h2>Let’s connect.</h2>
+            <p>
+              I am always interested in thoughtful conversations about finance,
+              business development, leadership and digital transformation.
+            </p>
+          </div>
+
+          <div class="contact-links">
+            <!-- Replace the email address -->
+            <a class="contact-link" href="mailto:your.email@example.com">
+              <span>Email</span>
+              <span>to be updated</span>
+            </a>
+
+            <!-- Replace with your LinkedIn URL -->
+            <a class="contact-link" href="https://www.linkedin.com/in/nina-honkalinna-ab5932180/" target="_blank" rel="noopener">
+              <span>LinkedIn</span>
+              <span>View profile ↗</span>
+            </a>
+
+            <!-- Replace with your CV file name -->
+            <a class="contact-link" href="your-cv.pdf" target="_blank">
+              <span>Curriculum Vitae</span>
+              <span>Download PDF ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <!-- Nina Honkalinna -->
+      <span>© <span id="year"></span> NINA HONKALINNA</span>
+      <span>Business • Finance • Transformation</span>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById("siteHeader");
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    // Add a background to the navigation after scrolling.
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("scrolled", window.scrollY > 30);
+    });
+
+    // Mobile navigation.
+    menuButton.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", isOpen);
+      menuButton.textContent = isOpen ? "×" : "☰";
+    });
+
+    // Close mobile navigation after selecting a link.
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰";
+      });
+    });
+
+    // Current year in the footer.
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Gentle scroll reveal animation.
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      revealObserver.observe(element);
+    });
+  </script>
+</body>
+</html>
